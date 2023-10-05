@@ -15,8 +15,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Investe"
 include(":app")
+include(":domain")
 include(":data")
 include(":data_local")
 include(":data_remote")
 include(":di")
-include(":domain")

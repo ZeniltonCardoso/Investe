@@ -1,0 +1,71 @@
+[versions]
+converterGsonVersion = "2.9.0"
+coreKtxVersion = "1.12.0"
+appCompatVersion = "1.6.1"
+firebaseCrashlyticsGradleVersion = "2.9.9"
+googleServicesVersion = "4.4.0"
+gsonVersion = "2.10.1"
+kotlinxCoroutinesCoreVersion = "1.7.3"
+kotlinxSerializationJsonVersion = "1.6.0"
+loggingInterceptorVersion = "4.10.0"
+materialVersion = "1.9.0"
+junitVersion = "4.13.2"
+extJunitVersion = "1.1.5"
+espressoCoreVersion = "3.5.1"
+lifecycleVersion = "2.6.2"
+activityComposeVersion = "1.7.2"
+composeBoomVersion = "2023.09.02"
+navigationVersion = "2.7.3"
+androidXSplashScreen = "1.0.1"
+koinVersion = "3.5.0"
+okhttpVersion = "4.11.0"
+retrofitCoroutineVersion = "0.9.2"
+dataStoreVersion = "1.0.0"
+androidVersionCode = "1"
+androidVersionName = "1"
+retrofitVersion = "2.9.0"
+
+[libraries]
+androidXCore = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
+appCompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompatVersion" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGsonVersion" }
+firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsGradleVersion" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gsonVersion" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCoreVersion" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJsonVersion" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptorVersion" }
+material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
+junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
+extJunit = { group = "androidx.test.ext", name = "junit", version.ref = "extJunitVersion" }
+espressoCore = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCoreVersion" }
+lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
+activityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityComposeVersion" }
+composeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBoomVersion" }
+composeUi = { group = "androidx.compose.ui", name = "ui"}
+composeGraphics = { group = "androidx.compose.ui", name = "ui-graphics"}
+composeToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview"}
+composeMaterial = { group = "androidx.compose.material3", name = "material3"}
+composeJUnit = { group = "androidx.compose.ui", name = "ui-test-junit4"}
+composeTestManifest = { group = "androidx.compose.ui", name = "ui-test-manifest"}
+composeTooling = { group = "androidx.compose.ui", name = "ui-tooling"}
+navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationVersion" }
+androidSplashScreen = {group = "androidx.core", name = "core-splashscreen", version.ref = "androidXSplashScreen"}
+koinCore = {group = "io.insert-koin", name = "koin-core", version.ref = "koinVersion"}
+koinAndroid = {group = "io.insert-koin", name = "koin-android", version.ref = "koinVersion"}
+koinCompose = {group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koinVersion"}
+koinTest = {group = "io.insert-koin", name = "koin-test", version.ref = "koinVersion"}
+firebaseBom = {group = "com.google.firebase", name = "firebase-bom", version = "32.3.1"}
+fireBaseMessaging = {group = "com.google.firebase", name = "firebase-messaging-ktx"}
+fireBaseAnalytics = {group = "com.google.firebase", name = "firebase-analytics-ktx"}
+fireBaseCrashlytics = {group = "com.google.firebase", name = "firebase-crashlytics-ktx"}
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+retrofitCoroutine = {group = "com.jakewharton.retrofit", name = "retrofit2-kotlin-coroutines-adapter", version.ref = "retrofitCoroutineVersion"}
+dataStore ={group="androidx.datastore", name="datastore-preferences", version.ref="dataStoreVersion"}
+
+[bundles]
+commonDependecies = ["androidXCore", "appCompat", "material"]
+composeDependecies = ["activityCompose", "composeUi", "composeGraphics", "composeToolingPreview", "composeMaterial", "composeTooling"]
+koinDependences = ["koinCore", "koinAndroid"]
+firebaseDependences = ["fireBaseAnalytics", "fireBaseCrashlytics"]
