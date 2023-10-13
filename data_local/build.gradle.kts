@@ -3,7 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 apply(from = "${rootProject.projectDir}/android-common.gradle")
-android{ namespace = "br.zc.data_local"
+android{
+    namespace = "br.zc.data_local"
     compileSdk = 34
 }
 dependencies {

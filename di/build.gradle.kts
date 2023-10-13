@@ -4,7 +4,8 @@ plugins {
 }
 
 apply(from = "${rootProject.projectDir}/android-common.gradle")
-android {namespace = "br.zc.di"
+android {
+    namespace = "br.zc.di"
     compileSdk = 34
 }
 

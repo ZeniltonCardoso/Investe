@@ -36,6 +36,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation(libs.navigation.runtime.ktx)
+    implementation(libs.navigation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.extJunit)
     androidTestImplementation(libs.espressoCore)
@@ -45,4 +47,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation(project(":di"))
     implementation(project(":data"))
+    implementation(project(":uikit"))
 }

@@ -5,6 +5,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -20,3 +21,4 @@ include(":data")
 include(":data_local")
 include(":data_remote")
 include(":di")
+include(":uikit")
