@@ -16,11 +16,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.zc.investe.R
+import br.zc.uikit.components.buttons.GhostButton
 import br.zc.uikit.components.buttons.PrimaryButton
 
 @Composable
 fun LoginScreen() {
-
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
@@ -39,16 +39,15 @@ fun LoginScreen() {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 16.dp),
-            text = "Entrar",
+            text = "Faça login com e-mail",
             enabled = true,
             onClick = {
 
             },
             shape = RoundedCornerShape(24.dp),
-            colorsButton = Color(0xFF1E90FF),
-            colorsText = Color.White
+            colorsButton = Color(0xFF1E90FF)
         )
-        PrimaryButton(
+        GhostButton(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 24.dp),
@@ -56,10 +55,7 @@ fun LoginScreen() {
             enabled = true,
             onClick = {
 
-            },
-            shape = RoundedCornerShape(24.dp),
-            colorsButton = Color(0xFF1E90FF),
-            colorsText = Color.White
+            }
         )
     }
 

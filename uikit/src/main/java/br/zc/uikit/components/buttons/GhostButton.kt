@@ -1,16 +1,16 @@
 package br.zc.uikit.components.buttons
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -20,25 +20,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun PrimaryButton(
-    modifier: Modifier = Modifier,
+fun GhostButton(
     text: String,
-    enabled: Boolean,
+    modifier: Modifier = Modifier,
     onClick: () -> Unit,
-    shape: RoundedCornerShape = RoundedCornerShape(8.dp),
-    colorsButton: Color = Color(0xFF1A73E8),
-    textStyle: TextStyle = MaterialTheme.typography.bodyMedium
+    enabled: Boolean = true,
+    contentPadding: PaddingValues = ButtonDefaults.TextButtonContentPadding,
+    textStyle: TextStyle = typography.bodyMedium,
 ) {
-    Button(
-        enabled = enabled,
-        shape = shape,
+    TextButton(
         onClick = onClick,
-        modifier = modifier
-            .heightIn(min = 48.dp)
-            .fillMaxWidth(),
-        colors = ButtonDefaults.buttonColors(
-            containerColor = colorsButton,
-        )
+        modifier = modifier.heightIn(min = 48.dp),
+        contentPadding = contentPadding,
+        enabled = enabled,
+        border = BorderStroke(1.dp, Color.DarkGray)
     ) {
         Text(
             text = text,
@@ -53,20 +48,27 @@ fun PrimaryButton(
 
 @Preview
 @Composable
-fun PrimaryButtonPreview() {
+fun TextButtonPreview() {
     Column {
-        PrimaryButton(
+        GhostButton(
             text = "Preview",
-            enabled = true,
-            onClick = { },
-            colorsButton = Color(0xFFE8F0FE),
+            onClick = { }
         )
         Spacer(modifier = Modifier.height(16.dp))
-        PrimaryButton(
+        GhostButton(
             text = "Preview",
-            enabled = true,
+            onClick = { }
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        GhostButton(
+            text = "Preview",
             onClick = { },
-            colorsButton = Color(0xFF1A73E8),
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        GhostButton(
+            text = "Preview",
+            onClick = { },
+            enabled = false
         )
     }
 }
