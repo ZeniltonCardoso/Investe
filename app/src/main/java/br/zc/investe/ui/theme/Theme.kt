@@ -51,7 +51,7 @@ fun InvesteTheme(
         SideEffect {
             val window = (view.context as Activity).window
             window.statusBarColor = view.resources.getColor(R.color.background, view.context.theme)
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
         }
     }
 

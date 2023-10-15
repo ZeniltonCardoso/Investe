@@ -10,4 +10,6 @@ android{
 dependencies {
     implementation(project(":data"))
     implementation(libs.dataStore)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
 }

@@ -2,13 +2,16 @@
 converterGsonVersion = "2.9.0"
 coreKtxVersion = "1.12.0"
 appCompatVersion = "1.6.1"
+firebaseAnalyticsVersion = "21.3.0"
 firebaseCrashlyticsGradleVersion = "2.9.9"
+firebaseCrashlyticsVersion = "18.4.3"
 foundationAndroidVersion = "1.5.3"
 googleServicesVersion = "4.4.0"
 gsonVersion = "2.10.1"
 kotlinxCoroutinesCoreVersion = "1.7.3"
 kotlinxSerializationJsonVersion = "1.6.0"
 loggingInterceptorVersion = "4.10.0"
+material3Version = "1.1.2"
 materialVersion = "1.9.0"
 junitVersion = "4.13.2"
 extJunitVersion = "1.1.5"
@@ -34,6 +37,8 @@ uiToolingPreviewAndroidVersion = "1.5.3"
 androidXCore = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
 appCompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompatVersion" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGsonVersion" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics", version.ref = "firebaseAnalyticsVersion" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics", version.ref = "firebaseCrashlyticsVersion" }
 firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsGradleVersion" }
 foundation-android = { module = "androidx.compose.foundation:foundation-android", version.ref = "foundationAndroidVersion" }
 google-services = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }
@@ -55,6 +60,7 @@ composeMaterial = { group = "androidx.compose.material3", name = "material3"}
 composeJUnit = { group = "androidx.compose.ui", name = "ui-test-junit4"}
 composeTestManifest = { group = "androidx.compose.ui", name = "ui-test-manifest"}
 composeTooling = { group = "androidx.compose.ui", name = "ui-tooling"}
+material3 = { module = "androidx.compose.material3:material3", version.ref = "material3Version" }
 navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationVersion" }
 androidSplashScreen = {group = "androidx.core", name = "core-splashscreen", version.ref = "androidXSplashScreen"}
 koinCore = {group = "io.insert-koin", name = "koin-core", version.ref = "koinVersion"}

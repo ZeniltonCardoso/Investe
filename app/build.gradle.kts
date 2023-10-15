@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.firebase.crashlytics")
+    id("com.google.gms.google-services")
 }
 apply(from = "${rootProject.projectDir}/android-common.gradle")
 android {
@@ -38,6 +39,8 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation(libs.navigation.runtime.ktx)
     implementation(libs.navigation)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
     testImplementation(libs.junit)
     androidTestImplementation(libs.extJunit)
     androidTestImplementation(libs.espressoCore)

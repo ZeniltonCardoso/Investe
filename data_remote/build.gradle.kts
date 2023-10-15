@@ -13,7 +13,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.extJunit)
     androidTestImplementation(libs.espressoCore)
-
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     api(libs.okhttp)

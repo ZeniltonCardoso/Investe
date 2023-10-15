@@ -14,7 +14,8 @@ dependencies {
     implementation(project(path = ":data_remote"))
     implementation(project(path = ":data_local"))
     implementation(project(path = ":domain"))
-
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
     implementation(libs.bundles.koinDependences)
     implementation(libs.navigation)
     testImplementation(libs.koinTest)
