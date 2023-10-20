@@ -1,4 +1,4 @@
-package br.zc.investe.ui.login
+package br.zc.feature_authentication.login
 
 import androidx.lifecycle.ViewModel
 

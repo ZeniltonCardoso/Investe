@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.navigation)
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.analytics)
+    implementation("io.insert-koin:koin-androidx-compose:3.1.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.extJunit)
     androidTestImplementation(libs.espressoCore)
@@ -52,4 +53,5 @@ dependencies {
     implementation(project(":di"))
     implementation(project(":data"))
     implementation(project(":uikit"))
+    implementation(project(":feature_authentication"))
 }

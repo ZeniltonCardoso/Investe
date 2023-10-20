@@ -1,4 +1,4 @@
-package br.zc.investe.ui.theme
+package br.zc.uikit.components.theme
 
 import androidx.compose.ui.graphics.Color
 

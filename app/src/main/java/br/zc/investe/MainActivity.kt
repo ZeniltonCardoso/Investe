@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import br.zc.investe.ui.login.LoginScreen
-import br.zc.investe.ui.theme.InvesteTheme
+import br.zc.feature_authentication.login.LoginScreen
+import br.zc.uikit.components.theme.InvesteTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

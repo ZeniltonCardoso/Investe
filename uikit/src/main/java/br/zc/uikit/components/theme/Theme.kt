@@ -1,4 +1,4 @@
-package br.zc.investe.ui.theme
+package br.zc.uikit.components.theme
 
 import android.app.Activity
 import android.os.Build
@@ -13,7 +13,7 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import br.zc.investe.R
+import br.zc.uikit.R
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,

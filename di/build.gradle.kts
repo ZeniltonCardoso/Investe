@@ -14,6 +14,7 @@ dependencies {
     implementation(project(path = ":data_remote"))
     implementation(project(path = ":data_local"))
     implementation(project(path = ":domain"))
+    implementation(project(path = ":feature_authentication"))
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.analytics)
     implementation(libs.bundles.koinDependences)

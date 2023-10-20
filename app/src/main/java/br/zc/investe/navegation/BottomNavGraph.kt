@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import br.zc.investe.ui.login.LoginScreen
+import br.zc.feature_authentication.login.LoginScreen
 
 @Composable
 fun BottomNavGraph(

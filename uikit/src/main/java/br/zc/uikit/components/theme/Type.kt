@@ -1,4 +1,4 @@
-package br.zc.investe.ui.theme
+package br.zc.uikit.components.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package br.zc.investe.ui.login
+package br.zc.feature_authentication.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,7 +15,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.zc.investe.R
+import br.zc.uikit.R
 import br.zc.uikit.components.buttons.GhostButton
 import br.zc.uikit.components.buttons.PrimaryButton
 
