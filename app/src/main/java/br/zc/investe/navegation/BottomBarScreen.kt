@@ -1,6 +1,6 @@
 package br.zc.investe.navegation
 
-import br.zc.investe.R
+import br.zc.uikit.R
 
 sealed class BottomBarScreen(
     val route: String,
@@ -10,27 +10,27 @@ sealed class BottomBarScreen(
 ) {
 
     // for home
-    object Home: BottomBarScreen(
-        route = "home",
-        title = "Home",
-        icon = R.drawable.ic_launcher_foreground,
-        icon_focused = R.drawable.ic_launcher_foreground
+    object Login: BottomBarScreen(
+        route = "login",
+        title = "Login",
+        icon = R.drawable.icon_home,
+        icon_focused = R.drawable.icon_home
     )
 
     // for report
-    object Report: BottomBarScreen(
-        route = "report",
-        title = "Report",
-        icon = R.drawable.ic_launcher_foreground,
-        icon_focused = R.drawable.ic_launcher_foreground
+    object Home: BottomBarScreen(
+        route = "home",
+        title = "Home",
+        icon = R.drawable.icon_home,
+        icon_focused = R.drawable.icon_home
     )
 
     // for report
     object Profile: BottomBarScreen(
         route = "profile",
         title = "Profile",
-        icon = R.drawable.ic_launcher_foreground,
-        icon_focused = R.drawable.ic_launcher_foreground
+        icon = R.drawable.icon_profile,
+        icon_focused = R.drawable.icon_profile
     )
 
 }

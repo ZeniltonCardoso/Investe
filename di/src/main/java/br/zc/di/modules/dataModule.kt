@@ -1,4 +1,4 @@
-package br.zc.di
+package br.zc.di.modules
 
 import org.koin.dsl.module
 

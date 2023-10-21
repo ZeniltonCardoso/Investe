@@ -1,4 +1,4 @@
-package br.zc.di
+package br.zc.di.modules
 
 import br.zc.feature_authentication.login.LoginViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
