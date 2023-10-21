@@ -1,5 +1,6 @@
 package br.zc.feature_authentication.login
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -9,8 +10,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,7 +23,21 @@ import br.zc.uikit.components.buttons.GhostButton
 import br.zc.uikit.components.buttons.PrimaryButton
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(
+    state: SignInState,
+    onSignInClick: () -> Unit
+) {
+    val context = LocalContext.current
+    LaunchedEffect(key1 = state.signInError) {
+        state.signInError?.let { error ->
+            Toast.makeText(
+                context,
+                error,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
@@ -54,7 +71,7 @@ fun LoginScreen() {
             text = "Google",
             enabled = true,
             onClick = {
-
+                onSignInClick()
             }
         )
     }
@@ -64,5 +81,8 @@ fun LoginScreen() {
 @Preview(showBackground = true)
 @Composable
 fun LoginScreenPreview() {
-    LoginScreen()
+    LoginScreen(
+        SignInState(),
+        onSignInClick = {}
+    )
 }

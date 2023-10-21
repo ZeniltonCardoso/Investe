@@ -78,6 +78,7 @@ dataStore ={group="androidx.datastore", name="datastore-preferences", version.re
 navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version = "2.7.3" }
 runtime-android = { module = "androidx.compose.runtime:runtime-android", version.ref = "runtimeAndroidVersion" }
 ui-tooling-preview-android = { module = "androidx.compose.ui:ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroidVersion" }
+play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version = "20.7.0" }
 
 [bundles]
 commonDependecies = ["androidXCore", "appCompat", "material"]

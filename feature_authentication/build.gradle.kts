@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("com.google.gms.google-services")
 }
 
 apply(from = "${rootProject.projectDir}/android-common.gradle")
@@ -21,7 +22,12 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.androidXCore)
     implementation(libs.appCompat)
+    implementation(libs.bundles.koinDependences)
     implementation(libs.material)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation("com.google.firebase:firebase-auth:22.2.0")
+    implementation(libs.play.services.auth)
+    implementation("io.coil-kt:coil-compose:2.2.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.extJunit)
     androidTestImplementation(libs.espressoCore)

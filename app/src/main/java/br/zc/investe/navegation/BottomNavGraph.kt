@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import br.zc.feature_authentication.login.LoginScreen
 
 @Composable
 fun BottomNavGraph(
@@ -15,13 +14,13 @@ fun BottomNavGraph(
         startDestination = BottomBarScreen.Home.route
     ) {
         composable(route = BottomBarScreen.Home.route) {
-            LoginScreen()
+//            LoginScreen(state)
         }
         composable(route = BottomBarScreen.Report.route) {
-            LoginScreen()
+//            LoginScreen(state)
         }
         composable(route = BottomBarScreen.Profile.route) {
-            LoginScreen()
+//            LoginScreen(state)
         }
     }
 }
