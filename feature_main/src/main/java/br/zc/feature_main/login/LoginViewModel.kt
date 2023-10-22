@@ -1,4 +1,4 @@
-package br.zc.feature_authentication.login
+package br.zc.feature_main.login
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

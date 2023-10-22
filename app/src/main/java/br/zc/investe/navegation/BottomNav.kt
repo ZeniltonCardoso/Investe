@@ -71,7 +71,7 @@ fun AddItem(
         if (selected) MaterialTheme.colorScheme.primary.copy(alpha = 0.6f) else Color.Transparent
 
     val contentColor =
-        if (selected) Color.White else Color.Black
+        if (selected) Color.White else Color.White
 
     Box(
         modifier = Modifier

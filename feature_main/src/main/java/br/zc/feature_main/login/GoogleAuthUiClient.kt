@@ -1,4 +1,4 @@
-package br.zc.feature_authentication.login
+package br.zc.feature_main.login
 
 import android.content.Context
 import android.content.Intent

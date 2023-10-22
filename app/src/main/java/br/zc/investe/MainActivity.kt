@@ -14,7 +14,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import br.zc.investe.navegation.BottomBar
 import br.zc.investe.navegation.BottomNavGraph
-import br.zc.feature_authentication.login.GoogleAuthUiClient
+import br.zc.feature_main.login.GoogleAuthUiClient
 import br.zc.uikit.components.theme.InvesteTheme
 import com.google.android.gms.auth.api.identity.Identity
 

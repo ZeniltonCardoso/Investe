@@ -1,4 +1,4 @@
-package br.zc.feature_authentication.profile
+package br.zc.feature_main.profile
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -13,7 +13,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.zc.feature_authentication.login.UserData
+import br.zc.feature_main.login.UserData
 import coil.compose.AsyncImage
 
 @Composable

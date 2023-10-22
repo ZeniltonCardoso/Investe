@@ -15,11 +15,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import br.zc.feature_authentication.home.HomeScreen
-import br.zc.feature_authentication.login.GoogleAuthUiClient
-import br.zc.feature_authentication.login.LoginScreen
-import br.zc.feature_authentication.login.LoginViewModel
-import br.zc.feature_authentication.profile.ProfileScreen
+import br.zc.feature_main.home.HomeScreen
+import br.zc.feature_main.login.GoogleAuthUiClient
+import br.zc.feature_main.login.LoginScreen
+import br.zc.feature_main.login.LoginViewModel
+import br.zc.feature_main.profile.ProfileScreen
 import kotlinx.coroutines.launch
 
 @Composable
@@ -39,7 +39,7 @@ fun BottomNavGraph(
 
             LaunchedEffect(key1 = Unit) {
                 if (googleAuthUiClient.getSignedInUser() != null) {
-                    navController.navigate("profile")
+                    navController.navigate("home")
                 }
             }
 
@@ -59,12 +59,7 @@ fun BottomNavGraph(
 
             LaunchedEffect(key1 = state.isSignInSuccessful) {
                 if (state.isSignInSuccessful) {
-                    Toast.makeText(
-                        context,
-                        "Sign in successful",
-                        Toast.LENGTH_LONG
-                    ).show()
-                    navController.navigate("profile")
+                    navController.navigate("home")
                     viewModel.resetState()
                 }
             }

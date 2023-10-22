@@ -1,4 +1,4 @@
-package br.zc.feature_authentication.login
+package br.zc.feature_main.login
 
 import android.widget.Toast
 import androidx.compose.foundation.Image

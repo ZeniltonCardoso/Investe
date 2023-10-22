@@ -54,5 +54,5 @@ dependencies {
     implementation(project(":di"))
     implementation(project(":data"))
     implementation(project(":uikit"))
-    implementation(project(":feature_authentication"))
+    implementation(project(":feature_main"))
 }

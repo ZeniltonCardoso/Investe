@@ -1,4 +1,4 @@
-package br.zc.feature_authentication.login
+package br.zc.feature_main.login
 
 data class SignInState(
     val isSignInSuccessful: Boolean = false,
