@@ -5,6 +5,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -15,8 +16,10 @@ dependencyResolutionManagement {
 
 rootProject.name = "Investe"
 include(":app")
+include(":domain")
 include(":data")
 include(":data_local")
 include(":data_remote")
 include(":di")
-include(":domain")
+include(":uikit")
+include(":feature_main")

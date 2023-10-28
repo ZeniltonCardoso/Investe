@@ -3,41 +3,27 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-android {
-    namespace = "br.zc.data_remote"
-    compileSdk = 33
+apply(from = "${rootProject.projectDir}/android-common.gradle")
 
-    defaultConfig {
-        minSdk = 24
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+android{ namespace = "br.zc.data_remote"
+    compileSdk = 34
 }
-
 dependencies {
+    implementation(libs.bundles.commonDependecies)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.extJunit)
+    androidTestImplementation(libs.espressoCore)
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    api(libs.okhttp)
+    implementation(libs.logging.interceptor)
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(libs.kotlinx.coroutines.core)
+
+    implementation(libs.koinCore)
+    implementation(libs.dataStore)
+
+    implementation(project(":data"))
 }

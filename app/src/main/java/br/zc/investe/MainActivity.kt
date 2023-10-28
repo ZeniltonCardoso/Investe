@@ -3,25 +3,50 @@ package br.zc.investe
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import br.zc.investe.ui.theme.InvesteTheme
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import br.zc.investe.navegation.BottomBar
+import br.zc.investe.navegation.BottomNavGraph
+import br.zc.feature_main.login.GoogleAuthUiClient
+import br.zc.uikit.components.theme.InvesteTheme
+import com.google.android.gms.auth.api.identity.Identity
 
 class MainActivity : ComponentActivity() {
+
+    private val googleAuthUiClient by lazy {
+        GoogleAuthUiClient(
+            context = applicationContext,
+            oneTapClient = Identity.getSignInClient(applicationContext)
+        )
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         setContent {
             InvesteTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                val navController = rememberNavController()
+                Scaffold(
+                    bottomBar = {
+                        val currentRoute = currentRoute(navController)
+                        if (currentRoute != "login") {
+                            BottomBar(navController = navController)
+                        }
+                    }
                 ) {
-                    Greeting("Android")
+                    Modifier.padding(it)
+                    BottomNavGraph(
+                        navController = navController,
+                        googleAuthUiClient = googleAuthUiClient,
+                        lifecycleScope = lifecycleScope
+                    )
                 }
             }
         }
@@ -29,17 +54,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    InvesteTheme {
-        Greeting("Android")
-    }
+fun currentRoute(navController: NavController): String? {
+    val backStackEntry = navController.currentBackStackEntryAsState()
+    return backStackEntry.value?.destination?.route
 }
