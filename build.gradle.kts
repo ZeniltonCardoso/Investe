@@ -9,7 +9,7 @@ plugins {
 buildscript {
     dependencies {
         classpath(libs.firebase.crashlytics.gradle)
-        classpath("com.android.tools.build:gradle:7.3.0")
+        classpath("com.android.tools.build:gradle:8.1.4")
         classpath("com.google.gms:google-services:4.4.0")
     }
 }
