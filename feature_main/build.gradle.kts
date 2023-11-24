@@ -25,7 +25,7 @@ dependencies {
     implementation(libs.bundles.koinDependences)
     implementation(libs.material)
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("com.google.firebase:firebase-auth:22.2.0")
+    implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation(libs.play.services.auth)
     implementation("io.coil-kt:coil-compose:2.2.2")
     testImplementation(libs.junit)
