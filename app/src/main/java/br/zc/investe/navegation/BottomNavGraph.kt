@@ -29,6 +29,11 @@ fun BottomNavGraph(
     lifecycleScope: LifecycleCoroutineScope
 ) {
     val context = LocalContext.current
+    LaunchedEffect(key1 = Unit) {
+        if (googleAuthUiClient.getSignedInUser() != null) {
+            navController.navigate("home")
+        }
+    }
     NavHost(
         navController = navController,
         startDestination = BottomBarScreen.Login.route
@@ -36,12 +41,6 @@ fun BottomNavGraph(
         composable(BottomBarScreen.Login.route) {
             val viewModel = viewModel<LoginViewModel>()
             val state by viewModel.state.collectAsStateWithLifecycle()
-
-            LaunchedEffect(key1 = Unit) {
-                if (googleAuthUiClient.getSignedInUser() != null) {
-                    navController.navigate("home")
-                }
-            }
 
             val launcher = rememberLauncherForActivityResult(
                 contract = ActivityResultContracts.StartIntentSenderForResult(),
